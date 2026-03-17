@@ -1,118 +1,223 @@
-// ============================
-// ANDES TECH & DATA PARTNERS
-// Main JS
-// ============================
+/* ============================
+   ANDES TECH & DATA PARTNERS
+   main.js – Premium v2
+   ============================ */
 
-// --- NAV scroll effect ---
+// ── Custom Cursor ──────────────────────────────
+const cursor   = document.getElementById('cursor');
+const follower = document.getElementById('cursorFollower');
+if (window.matchMedia('(hover: hover)').matches) {
+  let mx = 0, my = 0, fx = 0, fy = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top  = my + 'px';
+  });
+  (function loop() {
+    fx += (mx - fx) * 0.12;
+    fy += (my - fy) * 0.12;
+    follower.style.left = fx + 'px';
+    follower.style.top  = fy + 'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button,.svc-card,.plan-card,.testi-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      follower.style.width  = '48px';
+      follower.style.height = '48px';
+      follower.style.borderColor = 'rgba(201,168,76,.6)';
+    });
+    el.addEventListener('mouseleave', () => {
+      follower.style.width  = '28px';
+      follower.style.height = '28px';
+      follower.style.borderColor = 'rgba(201,168,76,.4)';
+    });
+  });
+}
+
+// ── Nav scroll effect ──────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-});
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
 
-// --- Mobile menu ---
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-
+// ── Mobile menu ────────────────────────────────
+const burger    = document.getElementById('burger');
+const navMobile = document.getElementById('navMobile');
 burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-  const isOpen = mobileMenu.classList.contains('open');
-  burger.setAttribute('aria-expanded', isOpen);
-});
-
-// Close mobile menu when a link is clicked
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-  });
-});
-
-// Close mobile menu on outside click
-document.addEventListener('click', (e) => {
-  if (!nav.contains(e.target)) {
-    mobileMenu.classList.remove('open');
+  navMobile.classList.toggle('open');
+  const open = navMobile.classList.contains('open');
+  const spans = burger.querySelectorAll('span');
+  if (open) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+    spans[1].style.transform = 'rotate(-45deg) translate(4px,-4px)';
+  } else {
+    spans[0].style.transform = '';
+    spans[1].style.transform = '';
   }
 });
-
-// --- Intersection Observer: fade-in on scroll ---
-const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+navMobile.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navMobile.classList.remove('open');
+    burger.querySelectorAll('span').forEach(s => s.style.transform = '');
   });
-}, observerOptions);
-
-document.querySelectorAll(
-  '.service-card, .step, .pricing-card, .testimonial-card, .why__feature, .why__card, .contact-form'
-).forEach((el, i) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = `opacity .5s ease ${i * 0.07}s, transform .5s ease ${i * 0.07}s`;
-  observer.observe(el);
 });
 
-// Add .visible styles via JS
-const style = document.createElement('style');
-style.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
-document.head.appendChild(style);
+// ── Smooth scroll ──────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 
-// --- Contact form ---
+// ── Hero canvas: animated particle grid ────────
+(function initCanvas() {
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], lines = [];
+  const COLS = 12, ROWS = 8, N_PARTICLES = 40;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+    buildGrid();
+  }
+
+  function buildGrid() {
+    lines = [];
+    const cw = W / COLS, rh = H / ROWS;
+    // vertical
+    for (let c = 0; c <= COLS; c++) lines.push([c*cw,0,c*cw,H]);
+    // horizontal
+    for (let r = 0; r <= ROWS; r++) lines.push([0,r*rh,W,r*rh]);
+    // Reset particles
+    particles = Array.from({length: N_PARTICLES}, () => makeParticle());
+  }
+
+  function makeParticle() {
+    return {
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random()-.5)*.4, vy: (Math.random()-.5)*.4,
+      r: Math.random() * 1.5 + .5,
+      a: Math.random(),
+      gold: Math.random() > .6
+    };
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Grid
+    ctx.strokeStyle = 'rgba(47,117,181,0.06)';
+    ctx.lineWidth = 1;
+    lines.forEach(([x1,y1,x2,y2]) => {
+      ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+    });
+
+    // Particles
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = p.gold
+        ? `rgba(201,168,76,${p.a * .6})`
+        : `rgba(47,117,181,${p.a * .5})`;
+      ctx.fill();
+    });
+
+    // Connection lines between close particles
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i+1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 120) {
+          ctx.strokeStyle = `rgba(47,117,181,${(1 - dist/120) * 0.15})`;
+          ctx.lineWidth = .5;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  draw();
+})();
+
+// ── Reveal on scroll ───────────────────────────
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+}, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObserver.observe(el));
+
+// ── Hero title lines stagger ───────────────────
+document.querySelectorAll('.hero-title .line').forEach(line => {
+  const delay = line.dataset.delay || 0;
+  line.style.animationDelay = delay + 'ms';
+});
+
+// ── Counter animation ──────────────────────────
+function animateCount(el, to, dur = 1400) {
+  let start = null;
+  const from = 0;
+  function step(ts) {
+    if (!start) start = ts;
+    const progress = Math.min((ts - start) / dur, 1);
+    const ease = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+    el.textContent = Math.round(from + (to - from) * ease);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      animateCount(el, parseInt(el.dataset.target, 10));
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: .5 });
+document.querySelectorAll('.metric-num[data-target]').forEach(el => counterObserver.observe(el));
+
+// ── Contact form ───────────────────────────────
 const form = document.getElementById('contactForm');
+const submitTxt = document.getElementById('submitTxt');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = '✓ Solicitud enviada — te contactamos pronto';
+    submitTxt.textContent = '✓ Solicitud enviada — te contactamos pronto';
     btn.disabled = true;
-    btn.style.background = 'linear-gradient(135deg, #1a9c6b, #22c55e)';
+    btn.style.opacity = '.8';
     setTimeout(() => {
-      btn.textContent = originalText;
+      submitTxt.textContent = 'Enviar solicitud';
       btn.disabled = false;
-      btn.style.background = '';
+      btn.style.opacity = '';
       form.reset();
     }, 5000);
   });
 }
 
-// --- Smooth scroll for anchor links ---
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
+// ── Parallax on hero orbs ──────────────────────
+window.addEventListener('scroll', () => {
+  const sy = window.scrollY;
+  document.querySelectorAll('.hero-glow-orb').forEach((orb, i) => {
+    orb.style.transform = `translateY(${sy * (i === 0 ? .08 : .05)}px)`;
   });
-});
-
-// --- Stats counter animation ---
-function animateCounter(el, target, duration = 1500) {
-  let start = 0;
-  const step = target / (duration / 16);
-  const prefix = el.textContent.startsWith('+') ? '+' : '';
-  const timer = setInterval(() => {
-    start = Math.min(start + step, target);
-    el.textContent = prefix + Math.round(start);
-    if (start >= target) clearInterval(timer);
-  }, 16);
-}
-
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const num = entry.target;
-      const raw = num.textContent.replace('+', '').replace(',', '');
-      const val = parseInt(raw, 10);
-      if (!isNaN(val)) animateCounter(num, val);
-      statsObserver.unobserve(num);
-    }
+  document.querySelectorAll('.cta-orb').forEach((orb, i) => {
+    orb.style.transform = `translateY(${sy * (i === 0 ? .04 : .03)}px)`;
   });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.stat__num').forEach(el => statsObserver.observe(el));
+}, { passive: true });
