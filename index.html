@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andes Tech & Data Partners – Convertimos estrategia en software</title>
+  <meta name="description" content="Soluciones de software y datos para empresas que quieren crecer. Desarrollo web, apps, inteligencia de datos e ingeniería de software." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">▲</span>
+        <span class="logo-text">Andes <strong>Tech & Data</strong></span>
+      </a>
+      <nav class="nav__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn btn--sm btn--outline">Cotizar proyecto</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#servicios" class="mobile-link">Servicios</a>
+      <a href="#metodologia" class="mobile-link">Metodología</a>
+      <a href="#nosotros" class="mobile-link">Nosotros</a>
+      <a href="#contacto" class="mobile-link mobile-link--cta">Cotizar proyecto</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+    </div>
+    <div class="container hero__content">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        Soluciones de software &amp; datos
+      </div>
+      <h1 class="hero__title">
+        Convertimos<br />
+        <span class="gradient-text">estrategia</span><br />
+        en software
+      </h1>
+      <p class="hero__sub">
+        Construimos plataformas digitales, sistemas de datos e ingeniería de software
+        que impulsan el crecimiento real de tu empresa.
+      </p>
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary btn--lg">Iniciar proyecto</a>
+        <a href="#servicios" class="btn btn--ghost btn--lg">Ver servicios</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num">+50</span>
+          <span class="stat__label">Proyectos entregados</span>
+        </div>
+        <div class="stat__sep"></div>
+        <div class="stat">
+          <span class="stat__num">+30</span>
+          <span class="stat__label">Clientes satisfechos</span>
+        </div>
+        <div class="stat__sep"></div>
+        <div class="stat">
+          <span class="stat__num">5</span>
+          <span class="stat__label">Países de alcance</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- LOGOS / SOCIAL PROOF -->
+  <section class="logos">
+    <div class="container">
+      <p class="logos__label">Empresas que confían en nosotros</p>
+      <div class="logos__track">
+        <span class="logo-item">Exporta TV</span>
+        <span class="logo-item">Minería Data</span>
+        <span class="logo-item">Fintech Andes</span>
+        <span class="logo-item">LogiSur</span>
+        <span class="logo-item">AgriData Perú</span>
+        <span class="logo-item">CorpTech SAC</span>
+        <span class="logo-item">Exporta TV</span>
+        <span class="logo-item">Minería Data</span>
+        <span class="logo-item">Fintech Andes</span>
+        <span class="logo-item">LogiSur</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Servicios</span>
+        <h2 class="section-title">Lo que construimos<br /><span class="gradient-text">para ti</span></h2>
+        <p class="section-sub">Desde la arquitectura hasta el lanzamiento, cubrimos todo el ciclo de vida digital de tu empresa.</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card service-card--featured">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="26" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M16 22l4 4-4 4M24 26h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 36v4h36v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="service-card__tag">Core</div>
+          <h3>Desarrollo de Software a Medida</h3>
+          <p>Plataformas web, sistemas internos y aplicaciones construidas exactamente para tus procesos. Sin atajos, sin plantillas genéricas.</p>
+          <ul class="service-card__list">
+            <li>Aplicaciones web & móvil</li>
+            <li>APIs y microservicios</li>
+            <li>Integraciones con ERP/CRM</li>
+            <li>Automatización de procesos</li>
+          </ul>
+          <a href="#contacto" class="service-card__cta">Solicitar cotización →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/><path d="M24 8v16l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+          </div>
+          <h3>Ingeniería de Datos</h3>
+          <p>Pipelines, warehouses y dashboards que convierten datos crudos en decisiones estratégicas en tiempo real.</p>
+          <ul class="service-card__list">
+            <li>Data pipelines ETL/ELT</li>
+            <li>Data warehouse & lakes</li>
+            <li>Dashboards ejecutivos</li>
+          </ul>
+          <a href="#contacto" class="service-card__cta">Solicitar cotización →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 38l8-14 6 8 8-16 10 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Business Intelligence & Analytics</h3>
+          <p>Transformamos reportes en estrategia. KPIs, métricas y visualizaciones que tu equipo directivo realmente entiende.</p>
+          <ul class="service-card__list">
+            <li>Power BI / Tableau / Looker</li>
+            <li>Modelos predictivos básicos</li>
+            <li>Reporting automatizado</li>
+          </ul>
+          <a href="#contacto" class="service-card__cta">Solicitar cotización →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2.5"/><rect x="26" y="8" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2.5"/><rect x="8" y="26" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M33 26v6m0 6v-6m0 0h-6m6 0h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Diseño UI/UX & Producto Digital</h3>
+          <p>Diseño orientado a conversión y usabilidad. Interfaces que enamoran a los usuarios y generan resultados de negocio.</p>
+          <ul class="service-card__list">
+            <li>Research & wireframing</li>
+            <li>Design system</li>
+            <li>Prototipado interactivo</li>
+          </ul>
+          <a href="#contacto" class="service-card__cta">Solicitar cotización →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6L6 18v24h12V30h12v12h12V18L24 6z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Sitios Web Corporativos</h3>
+          <p>Presencia digital profesional que genera confianza y convierte visitas en leads calificados para tu equipo comercial.</p>
+          <ul class="service-card__list">
+            <li>Landing pages de alta conversión</li>
+            <li>Sitios multiidioma</li>
+            <li>SEO técnico incluido</li>
+          </ul>
+          <a href="#contacto" class="service-card__cta">Solicitar cotización →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M14 24c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 14V8M24 40v-6M8 24h6M34 24h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+          </div>
+          <h3>Consultoría Tecnológica</h3>
+          <p>Acompañamos a tu equipo en decisiones de arquitectura, stack tecnológico y transformación digital con visión de largo plazo.</p>
+          <ul class="service-card__list">
+            <li>Auditoría tecnológica</li>
+            <li>Roadmap digital</li>
+            <li>CTO as a Service</li>
+          </ul>
+          <a href="#contacto" class="service-card__cta">Solicitar cotización →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why" id="nosotros">
+    <div class="container">
+      <div class="why__inner">
+        <div class="why__left">
+          <span class="section-tag">¿Por qué nosotros?</span>
+          <h2 class="section-title">Construimos con<br /><span class="gradient-text">visión de negocio</span></h2>
+          <p class="section-sub">No somos solo desarrolladores. Somos socios estratégicos que entienden tus objetivos antes de escribir una sola línea de código.</p>
+          <div class="why__features">
+            <div class="why__feature">
+              <div class="why__feature-icon">✦</div>
+              <div>
+                <strong>Enfoque en resultados</strong>
+                <p>Cada decisión técnica está alineada a un objetivo de negocio medible.</p>
+              </div>
+            </div>
+            <div class="why__feature">
+              <div class="why__feature-icon">✦</div>
+              <div>
+                <strong>Equipo senior dedicado</strong>
+                <p>Sin juniors ocultos. Trabajas directamente con quienes construyen tu solución.</p>
+              </div>
+            </div>
+            <div class="why__feature">
+              <div class="why__feature-icon">✦</div>
+              <div>
+                <strong>Comunicación transparente</strong>
+                <p>Avances semanales, demos reales y acceso directo al equipo en todo momento.</p>
+              </div>
+            </div>
+            <div class="why__feature">
+              <div class="why__feature-icon">✦</div>
+              <div>
+                <strong>Escalabilidad desde el día 1</strong>
+                <p>Arquitecturas pensadas para crecer contigo, no para rehacer en 6 meses.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why__right">
+          <div class="why__card-stack">
+            <div class="why__card why__card--top">
+              <div class="why__card-label">Tiempo de entrega</div>
+              <div class="why__card-value">3–8 semanas</div>
+              <div class="why__card-bar"><div class="why__card-fill" style="width:75%"></div></div>
+              <p>vs. 4–6 meses promedio del mercado</p>
+            </div>
+            <div class="why__card why__card--bottom">
+              <div class="why__card-label">Satisfacción del cliente</div>
+              <div class="why__card-value">98%</div>
+              <div class="why__card-stars">★★★★★</div>
+              <p>Basado en proyectos entregados</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section class="methodology" id="metodologia">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Metodología</span>
+        <h2 class="section-title">Cómo trabajamos<br /><span class="gradient-text">contigo</span></h2>
+        <p class="section-sub">Un proceso probado que garantiza claridad, calidad y entrega sin sorpresas.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <div class="step__content">
+            <h3>Discovery</h3>
+            <p>Entendemos tu negocio, objetivos y usuarios. Definimos el alcance real del proyecto con claridad total.</p>
+          </div>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <div class="step__content">
+            <h3>Diseño</h3>
+            <p>Wireframes, arquitectura de información y diseño visual aprobado por ti antes de comenzar a desarrollar.</p>
+          </div>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <div class="step__content">
+            <h3>Desarrollo</h3>
+            <p>Sprints semanales con demos reales. Código limpio, documentado y listo para escalar.</p>
+          </div>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <div class="step__content">
+            <h3>Validación</h3>
+            <p>Testing exhaustivo, revisión contigo y ajustes finales antes del lanzamiento.</p>
+          </div>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">05</div>
+          <div class="step__content">
+            <h3>Lanzamiento</h3>
+            <p>Publicación, capacitación y soporte post-lanzamiento para que tu equipo tome el control con confianza.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAQUETES -->
+  <section class="pricing" id="paquetes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inversión</span>
+        <h2 class="section-title">Paquetes de<br /><span class="gradient-text">desarrollo web</span></h2>
+        <p class="section-sub">Opciones claras para cada etapa de tu empresa. Todos los paquetes incluyen diseño responsive y soporte inicial.</p>
+      </div>
+      <div class="pricing__grid">
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Básico</span>
+            <div class="pricing-card__price">
+              <span class="price-from">Desde</span>
+              <span class="price-val">$1,500</span>
+              <span class="price-currency">USD</span>
+            </div>
+            <p>Presencia digital profesional y efectiva para arrancar con fuerza.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="check">✓</span> Sitio web de hasta 5 páginas</li>
+            <li><span class="check">✓</span> Diseño responsive (móvil + desktop)</li>
+            <li><span class="check">✓</span> Formulario de contacto</li>
+            <li><span class="check">✓</span> SEO básico</li>
+            <li><span class="check">✓</span> Integración redes sociales</li>
+            <li><span class="check">✓</span> Soporte 30 días</li>
+          </ul>
+          <a href="#contacto" class="btn btn--outline btn--block">Solicitar →</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Más elegido</div>
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Pro</span>
+            <div class="pricing-card__price">
+              <span class="price-from">Desde</span>
+              <span class="price-val">$3,500</span>
+              <span class="price-currency">USD</span>
+            </div>
+            <p>Plataforma completa con funcionalidades avanzadas y mayor conversión.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="check">✓</span> Todo lo del paquete Básico</li>
+            <li><span class="check">✓</span> Hasta 12 páginas personalizadas</li>
+            <li><span class="check">✓</span> Panel de administración CMS</li>
+            <li><span class="check">✓</span> Blog / noticias</li>
+            <li><span class="check">✓</span> Integraciones avanzadas</li>
+            <li><span class="check">✓</span> Analytics y tracking</li>
+            <li><span class="check">✓</span> Soporte 60 días</li>
+          </ul>
+          <a href="#contacto" class="btn btn--primary btn--block">Solicitar →</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Premium</span>
+            <div class="pricing-card__price">
+              <span class="price-from">Desde</span>
+              <span class="price-val">$7,000</span>
+              <span class="price-currency">USD</span>
+            </div>
+            <p>Solución a medida con arquitectura escalable y alta complejidad técnica.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="check">✓</span> Todo lo del paquete Pro</li>
+            <li><span class="check">✓</span> Plataforma a medida (sin límites)</li>
+            <li><span class="check">✓</span> Integraciones con ERP / CRM</li>
+            <li><span class="check">✓</span> Dashboard de datos / BI</li>
+            <li><span class="check">✓</span> Arquitectura cloud escalable</li>
+            <li><span class="check">✓</span> Capacitación al equipo</li>
+            <li><span class="check">✓</span> Soporte 90 días + SLA</li>
+          </ul>
+          <a href="#contacto" class="btn btn--outline btn--block">Solicitar →</a>
+        </div>
+
+      </div>
+      <p class="pricing__note">* Los precios son referenciales. Cada proyecto se cotiza según alcance validado. <a href="#contacto">Solicita tu cotización personalizada →</a></p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonios</span>
+        <h2 class="section-title">Lo que dicen<br /><span class="gradient-text">nuestros clientes</span></h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Andes Tech entregó nuestra plataforma en 5 semanas. El equipo entendió perfectamente lo que necesitábamos y lo ejecutó con una calidad que no esperábamos a ese precio."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar">CE</div>
+            <div>
+              <strong>Carlos E.</strong>
+              <span>Director, Perú Exporta TV</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Implementaron nuestro dashboard de datos en tiempo récord. Ahora tenemos visibilidad total de nuestras métricas de negocio. Lo recomiendo sin dudarlo."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar">ML</div>
+            <div>
+              <strong>María L.</strong>
+              <span>CEO, CorpTech SAC</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"La comunicación fue impecable. Sabíamos en todo momento el estado del proyecto. El resultado superó nuestras expectativas y el soporte post-lanzamiento fue excelente."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar">JR</div>
+            <div>
+              <strong>Jorge R.</strong>
+              <span>Gerente TI, LogiSur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band__inner">
+        <div class="cta-band__glow"></div>
+        <h2>¿Listo para construir<br /><span class="gradient-text">tu próximo proyecto?</span></h2>
+        <p>Agenda una reunión sin costo. En 30 minutos validamos tu alcance y te damos una propuesta real.</p>
+        <a href="#contacto" class="btn btn--primary btn--xl">Agendar reunión gratuita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__left">
+          <span class="section-tag">Contacto</span>
+          <h2 class="section-title">Hablemos de<br /><span class="gradient-text">tu proyecto</span></h2>
+          <p>Cuéntanos qué necesitas y te respondemos en menos de 24 horas con una propuesta inicial.</p>
+          <div class="contact__info">
+            <div class="contact__item">
+              <span class="contact__icon">✉</span>
+              <span>hola@andestechdata.com</span>
+            </div>
+            <div class="contact__item">
+              <span class="contact__icon">📞</span>
+              <span>+51 999 000 000</span>
+            </div>
+            <div class="contact__item">
+              <span class="contact__icon">📍</span>
+              <span>Lima, Perú – con alcance regional</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label>Empresa</label>
+                <input type="text" placeholder="Nombre de empresa" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="correo@empresa.com" required />
+            </div>
+            <div class="form-group">
+              <label>Servicio de interés</label>
+              <select>
+                <option value="">Seleccionar servicio...</option>
+                <option>Desarrollo de Software a Medida</option>
+                <option>Ingeniería de Datos</option>
+                <option>Business Intelligence & Analytics</option>
+                <option>Diseño UI/UX & Producto Digital</option>
+                <option>Sitio Web Corporativo</option>
+                <option>Consultoría Tecnológica</option>
+                <option>Otro / No sé aún</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Cuéntanos sobre tu proyecto</label>
+              <textarea rows="4" placeholder="¿Qué necesitas construir? ¿Cuál es el objetivo principal?"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block btn--lg">Enviar solicitud</button>
+            <p class="form-note">Te respondemos en menos de 24 horas hábiles.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-icon">▲</span>
+            <span class="logo-text">Andes <strong>Tech & Data Partners</strong></span>
+          </a>
+          <p>Convertimos estrategia en software. Construimos el futuro digital de tu empresa.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="WhatsApp">W</a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Servicios</h4>
+            <a href="#servicios">Desarrollo de Software</a>
+            <a href="#servicios">Ingeniería de Datos</a>
+            <a href="#servicios">BI & Analytics</a>
+            <a href="#servicios">UI/UX Design</a>
+          </div>
+          <div class="footer__col">
+            <h4>Empresa</h4>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#metodologia">Metodología</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Andes Tech & Data Partners. Todos los derechos reservados.</p>
+        <p>Hecho con ♥ en Lima, Perú.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
