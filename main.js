@@ -1,12 +1,12 @@
 /* ============================
    ANDES TECH & DATA PARTNERS
-   main.js – v5 Interactive
+   main.js – v6 Dramatic · Editorial
    ============================ */
 
-// ── Nav scroll ────────────────────────────────
+// ── Nav scroll (transparent → solid) ─────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
+  nav.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
 // ── Mobile menu ───────────────────────────────
@@ -40,7 +40,7 @@ const revealObs = new IntersectionObserver((entries, obs) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
   });
-}, { threshold: .08, rootMargin: '0px 0px -36px 0px' });
+}, { threshold: .07, rootMargin: '0px 0px -32px 0px' });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 // ── Counter animation ─────────────────────────
@@ -52,14 +52,14 @@ const countObs = new IntersectionObserver((entries, obs) => {
     let start = null;
     (function step(ts) {
       if (!start) start = ts;
-      const p    = Math.min((ts - start) / 1400, 1);
+      const p    = Math.min((ts - start) / 1500, 1);
       const ease = 1 - Math.pow(1 - p, 3);
       el.textContent = Math.round(to * ease);
       if (p < 1) requestAnimationFrame(step);
     })(performance.now());
     obs.unobserve(el);
   });
-}, { threshold: .5 });
+}, { threshold: .4 });
 document.querySelectorAll('.count[data-target]').forEach(el => countObs.observe(el));
 
 // ── Ripple effect ─────────────────────────────
@@ -75,7 +75,7 @@ document.querySelectorAll('.ripple').forEach(el => {
   });
 });
 
-// ── Card spotlight / mouse glow effect ────────
+// ── Card spotlight / mouse glow ───────────────
 document.querySelectorAll('.spotlight-card').forEach(card => {
   card.addEventListener('mousemove', function(e) {
     const rect = card.getBoundingClientRect();
@@ -84,85 +84,44 @@ document.querySelectorAll('.spotlight-card').forEach(card => {
     card.style.setProperty('--mouse-x', `${x}%`);
     card.style.setProperty('--mouse-y', `${y}%`);
   });
-  card.addEventListener('mouseleave', function() {
+  card.addEventListener('mouseleave', () => {
     card.style.setProperty('--mouse-x', '50%');
     card.style.setProperty('--mouse-y', '50%');
   });
 });
 
-// ── Magnetic hover on CTA buttons ─────────────
-document.querySelectorAll('.btn-primary, .cf-submit, .plan-link--solid').forEach(btn => {
-  btn.addEventListener('mousemove', function(e) {
-    const rect = this.getBoundingClientRect();
-    const cx = rect.left + rect.width  / 2;
-    const cy = rect.top  + rect.height / 2;
-    const dx = (e.clientX - cx) * 0.18;
-    const dy = (e.clientY - cy) * 0.18;
-    this.style.transform = `translate(${dx}px, ${dy}px) translateY(-3px)`;
-  });
-  btn.addEventListener('mouseleave', function() {
-    this.style.transform = '';
-  });
-});
-
-// ── Hero parallax on mouse ────────────────────
+// ── Hero parallax: glow follows mouse ────────
 const heroSection = document.querySelector('.hero');
-const heroShapes  = document.querySelector('.hero-bg-shapes');
-if (heroSection && heroShapes) {
+if (heroSection) {
   heroSection.addEventListener('mousemove', function(e) {
     const rect = heroSection.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width  - 0.5;
     const y = (e.clientY - rect.top)  / rect.height - 0.5;
-    const hbs1 = heroShapes.querySelector('.hbs-1');
-    const hbs2 = heroShapes.querySelector('.hbs-2');
-    if (hbs1) hbs1.style.transform = `translate(${x * 18}px, ${y * 18}px)`;
-    if (hbs2) hbs2.style.transform = `translate(${x * -12}px, ${y * -12}px)`;
+    const g1 = heroSection.querySelector('.hero-glow--1');
+    const g2 = heroSection.querySelector('.hero-glow--2');
+    if (g1) g1.style.transform = `translate(${x * 24}px, ${y * 24}px)`;
+    if (g2) g2.style.transform = `translate(${x * -16}px, ${y * -16}px)`;
   });
   heroSection.addEventListener('mouseleave', () => {
-    const hbs1 = heroShapes.querySelector('.hbs-1');
-    const hbs2 = heroShapes.querySelector('.hbs-2');
-    if (hbs1) hbs1.style.transform = '';
-    if (hbs2) hbs2.style.transform = '';
+    const g1 = heroSection.querySelector('.hero-glow--1');
+    const g2 = heroSection.querySelector('.hero-glow--2');
+    if (g1) g1.style.transform = '';
+    if (g2) g2.style.transform = '';
   });
 }
 
-// ── Stat items stagger on scroll ──────────────
-const statObs = new IntersectionObserver((entries, obs) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const items = e.target.querySelectorAll('.stat-item');
-      items.forEach((item, i) => {
-        setTimeout(() => item.classList.add('in'), i * 80);
-      });
-      obs.unobserve(e.target);
-    }
+// ── Plan cards 3D tilt ────────────────────────
+document.querySelectorAll('.plan-card').forEach(card => {
+  card.addEventListener('mousemove', function(e) {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width  - 0.5;
+    const y = (e.clientY - rect.top)  / rect.height - 0.5;
+    card.style.transform = `translateY(-6px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
   });
-}, { threshold: .2 });
-const statGrid = document.querySelector('.stats-grid');
-if (statGrid) {
-  statGrid.querySelectorAll('.stat-item').forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(16px)';
-    item.style.transition = 'opacity .5s ease, transform .5s ease';
+  card.addEventListener('mouseleave', function() {
+    card.style.transform = '';
   });
-  statGrid.addEventListener('transitionend', () => {}, { once: true });
-  statObs.observe(statGrid);
-  document.addEventListener('DOMContentLoaded', () => {
-    new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.stat-item').forEach((item, i) => {
-            setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'translateY(0)';
-            }, i * 90);
-          });
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: .25 }).observe(e.target);
-  });
-}
+});
 
 // ── Marquee pause on hover ────────────────────
 const marqueeTrack = document.querySelector('.marquee-track');
@@ -175,45 +134,54 @@ if (marqueeTrack) {
   });
 }
 
-// ── Active nav link on scroll ─────────────────
-const sections = document.querySelectorAll('section[id], div[id]');
+// ── Magnetic CTAs ─────────────────────────────
+document.querySelectorAll('.btn-primary, .btn-ghost, .cf-submit').forEach(btn => {
+  btn.addEventListener('mousemove', function(e) {
+    const rect = this.getBoundingClientRect();
+    const dx = (e.clientX - (rect.left + rect.width / 2))  * 0.15;
+    const dy = (e.clientY - (rect.top  + rect.height / 2)) * 0.15;
+    this.style.transform = `translate(${dx}px, ${dy}px) translateY(-3px)`;
+  });
+  btn.addEventListener('mouseleave', function() {
+    this.style.transform = '';
+  });
+});
+
+// ── Active nav scroll spy ─────────────────────
+const sections = document.querySelectorAll('section[id]');
 const navAs    = document.querySelectorAll('.nav-links a[href^="#"]');
-const scrollSpy = new IntersectionObserver((entries) => {
+new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      navAs.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === `#${e.target.id}`);
-      });
+      navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${e.target.id}`));
     }
   });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => scrollSpy.observe(s));
+}, { rootMargin: '-40% 0px -55% 0px' }).observe;
+sections.forEach(s => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${e.target.id}`));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' }).observe(s);
+});
 
 // ── Contact form ──────────────────────────────
 const form      = document.getElementById('contactForm');
 const feedback  = document.getElementById('formFeedback');
-const submitBtn = document.getElementById('submitBtn');
+const submitTxt = document.getElementById('submitTxt');
 
 if (form) {
-  // Floating label interaction
-  form.querySelectorAll('.cf-input').forEach(input => {
-    input.addEventListener('focus', () => {
-      input.closest('.cf-field').classList.add('focused');
-    });
-    input.addEventListener('blur', () => {
-      input.closest('.cf-field').classList.remove('focused');
-    });
-  });
-
   form.addEventListener('submit', e => {
     e.preventDefault();
     const btn = form.querySelector('.cf-submit');
     btn.classList.add('sending');
-    submitBtn.textContent = 'Enviando...';
+    submitTxt.textContent = 'Enviando...';
 
     setTimeout(() => {
       btn.classList.remove('sending');
-      submitBtn.textContent = 'Enviar mensaje';
+      submitTxt.textContent = 'Enviar mensaje';
       feedback.innerHTML = '✓ ¡Mensaje enviado! Te contactamos pronto.';
       feedback.style.color = '#16a34a';
       form.reset();
@@ -221,16 +189,3 @@ if (form) {
     }, 1800);
   });
 }
-
-// ── Tilt on plan cards ────────────────────────
-document.querySelectorAll('.plan-card').forEach(card => {
-  card.addEventListener('mousemove', function(e) {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width  - 0.5;
-    const y = (e.clientY - rect.top)  / rect.height - 0.5;
-    card.style.transform = `translateY(-6px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg)`;
-  });
-  card.addEventListener('mouseleave', function() {
-    card.style.transform = '';
-  });
-});
