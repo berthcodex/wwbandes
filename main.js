@@ -154,16 +154,6 @@ document.querySelectorAll('.ripple').forEach(el => {
 })();
 
 // ── Reveal on scroll ───────────────────────────
-new IntersectionObserver((entries, obs) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-}, { threshold: .1, rootMargin: '0px 0px -40px 0px' })
-  .observe.bind(
-    new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-    }, { threshold: .1, rootMargin: '0px 0px -40px 0px' })
-  );
-
-// Simpler, direct observer
 const ro = new IntersectionObserver((entries, obs) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
 }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
