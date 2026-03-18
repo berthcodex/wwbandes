@@ -3,396 +3,311 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Andes Tech & Data Partners – Convertimos estrategia en software</title>
-  <meta name="description" content="Desarrollo de software, ingeniería de datos y consultoría tecnológica. Lima, Perú."/>
+  <title>Andes Tech & Data Partners – We turn strategy into software</title>
+  <meta name="description" content="Desarrollo de software, ingeniería de datos y consultoría tecnológica de alto impacto. Lima, Perú."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<!-- CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
-
-<!-- NAV -->
+<!-- ═══ NAV ═══ -->
 <nav class="nav" id="nav">
-  <div class="nav-wrap">
-    <a href="#" class="brand">
-      <div class="brand-mark">
-        <svg viewBox="0 0 32 32" fill="none">
-          <polygon points="16,2 30,28 2,28" stroke="url(#lg)" stroke-width="2" fill="none"/>
-          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#C9A84C"/>
-            <stop offset="100%" stop-color="#2F75B5"/>
-          </linearGradient></defs>
-        </svg>
-      </div>
-      <div class="brand-text">
-        <span class="brand-name">Andes<em>Tech</em></span>
-        <span class="brand-sub">&amp; Data Partners</span>
-      </div>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#servicios" class="nav-link">Servicios</a>
-      <a href="#proceso" class="nav-link">Proceso</a>
-      <a href="#nosotros" class="nav-link">Nosotros</a>
-      <a href="#paquetes" class="nav-link">Paquetes</a>
-      <a href="#contacto" class="nav-cta btn-pill">Iniciar proyecto <span class="cta-arrow">→</span></a>
-    </div>
-    <button class="burger" id="burger">
-      <span></span><span></span>
-    </button>
+  <div class="nav-inner">
+    <a href="#" class="logo">ANDES<em>tech</em> <span>&amp; Data Partners</span></a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#metodologia">Metodología</a></li>
+      <li><a href="#soluciones">Soluciones</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+    </ul>
+    <a href="#contacto" class="btn-nav">Iniciar proyecto</a>
+    <button class="burger" id="burger"><span></span><span></span></button>
   </div>
   <div class="nav-mobile" id="navMobile">
     <a href="#servicios">Servicios</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#paquetes">Paquetes</a>
+    <a href="#metodologia">Metodología</a>
+    <a href="#soluciones">Soluciones</a>
+    <a href="#equipo">Equipo</a>
     <a href="#contacto" class="mob-cta">Iniciar proyecto</a>
   </div>
 </nav>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero" id="hero">
-  <canvas class="hero-canvas" id="heroCanvas"></canvas>
-  <div class="hero-noise"></div>
-
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-pill-badge">
-        <span class="pill-dot"></span>
-        Software · Datos · Estrategia
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-tag reveal">
+        <span class="tag-dot"></span> Lima, Perú · Alcance regional
       </div>
-
-      <h1 class="hero-title">
-        <span class="line" style="--delay:0ms">Convertimos</span>
-        <span class="line hero-highlight" style="--delay:100ms">estrategia</span>
-        <span class="line" style="--delay:200ms">en software.</span>
+      <h1 class="hero-title reveal" style="--d:.05s">
+        Convertimos<br/>
+        <em>estrategia</em><br/>
+        en resultados.
       </h1>
-
-      <p class="hero-desc">
-        Construimos plataformas digitales, sistemas de datos y productos tecnológicos
-        que generan crecimiento real para tu empresa.
+      <p class="hero-sub reveal" style="--d:.12s">
+        Desarrollamos plataformas digitales e inteligencia de datos para empresas
+        que quieren crecer con tecnología de alto impacto. Sin intermediarios, sin excusas.
       </p>
-
-      <div class="hero-actions">
-        <a href="#contacto" class="btn-main ripple">
-          <span>Iniciar proyecto</span>
-        </a>
-        <a href="#servicios" class="btn-ghost-pill">
-          Ver servicios
-          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="hero-actions reveal" style="--d:.18s">
+        <a href="#contacto" class="btn-primary ripple">Iniciar proyecto</a>
+        <a href="#servicios" class="btn-text">Ver servicios <span>→</span></a>
       </div>
-
-      <div class="hero-metrics">
-        <div class="metric">
-          <strong class="metric-num" data-target="50">0</strong><sup>+</sup>
+      <div class="hero-metrics reveal" style="--d:.25s">
+        <div class="hm-item">
+          <strong class="count" data-target="50">0</strong><sup>+</sup>
           <span>Proyectos</span>
         </div>
-        <div class="metric-line"></div>
-        <div class="metric">
-          <strong class="metric-num" data-target="30">0</strong><sup>+</sup>
+        <div class="hm-sep"></div>
+        <div class="hm-item">
+          <strong class="count" data-target="30">0</strong><sup>+</sup>
           <span>Clientes</span>
         </div>
-        <div class="metric-line"></div>
-        <div class="metric">
-          <strong class="metric-num" data-target="5">0</strong>
+        <div class="hm-sep"></div>
+        <div class="hm-item">
+          <strong class="count" data-target="5">0</strong>
           <span>Países</span>
         </div>
       </div>
     </div>
-
-    <div class="hero-right">
-      <div class="hero-card-stack">
-        <div class="floating-card card-1">
-          <div class="fc-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <p class="fc-label">Tiempo de entrega</p>
-            <p class="fc-val">3–8 semanas</p>
-          </div>
-        </div>
-        <div class="floating-card card-2">
-          <div class="fc-bar-row">
-            <span>Satisfacción</span><span class="fc-pct">98%</span>
-          </div>
-          <div class="fc-bar"><div class="fc-fill"></div></div>
-          <p class="fc-sub">Proyectos entregados con éxito</p>
-        </div>
-        <div class="floating-card card-3">
-          <div class="fc-stack-label">Stack tecnológico</div>
-          <div class="fc-tags">
-            <span>React</span><span>Node</span><span>Python</span>
-            <span>AWS</span><span>SQL</span><span>+más</span>
-          </div>
-        </div>
-        <div class="hero-glow-orb orb-1"></div>
-        <div class="hero-glow-orb orb-2"></div>
+    <div class="hero-image reveal" style="--d:.1s">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Equipo Andes Tech trabajando en estrategia digital" loading="eager"/>
+      <div class="hero-img-badge">
+        <div class="hib-dot"></div>
+        <span>Equipo disponible · 48 h arranque</span>
       </div>
     </div>
   </div>
-
-  <div class="scroll-hint">
-    <div class="scroll-track"><div class="scroll-thumb"></div></div>
-    <span>Scroll</span>
-  </div>
 </section>
 
-<!-- wave divider -->
-<div class="wave-divider wave-divider--hero">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#080F1E"/>
-  </svg>
-</div>
-
-<!-- LOGOS BAND -->
-<div class="logos-band">
-  <div class="logos-fade logos-fade--left"></div>
-  <div class="logos-track">
-    <span>Perú Exporta TV</span><span>CorpTech SAC</span><span>LogiSur</span>
-    <span>AgriData Perú</span><span>Fintech Andes</span><span>MinData</span>
-    <span>Perú Exporta TV</span><span>CorpTech SAC</span><span>LogiSur</span>
-    <span>AgriData Perú</span><span>Fintech Andes</span><span>MinData</span>
-  </div>
-  <div class="logos-fade logos-fade--right"></div>
-</div>
-
-<!-- ═══════════════ SERVICIOS ═══════════════ -->
-<section class="section" id="servicios">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="s-tag">Servicios</span>
-      <h2 class="s-title">Lo que <span class="text-gold">construimos</span><br/>para ti</h2>
-      <p class="s-sub">Desde la arquitectura hasta el lanzamiento. Cubrimos todo el ciclo de vida digital de tu empresa.</p>
+<!-- ═══ STATS BAND ═══ -->
+<div class="stats-band">
+  <div class="container stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num">+50</div>
+      <div class="stat-lbl">Proyectos entregados</div>
     </div>
+    <div class="stat-item reveal" style="--d:.06s">
+      <div class="stat-num">48h</div>
+      <div class="stat-lbl">Arranque garantizado</div>
+    </div>
+    <div class="stat-item reveal" style="--d:.12s">
+      <div class="stat-num">3–8</div>
+      <div class="stat-lbl">Semanas promedio</div>
+    </div>
+    <div class="stat-item reveal" style="--d:.18s">
+      <div class="stat-num">98%</div>
+      <div class="stat-lbl">Satisfacción del cliente</div>
+    </div>
+  </div>
+</div>
 
+<!-- ═══ SERVICIOS ═══ -->
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="section-hd">
+      <p class="section-tag">Servicios</p>
+      <h2>Lo que <b>construimos</b></h2>
+      <p>Cubrimos el stack digital completo: desde la web que genera clientes hasta los modelos que anticipan mercados.</p>
+    </div>
     <div class="services-grid">
 
-      <div class="svc-card svc-card--lg reveal">
-        <div class="svc-num">01</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M13 19l4 4-4 4M20 23h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="svc-card reveal">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75" alt="Desarrollo web" loading="lazy"/>
+        <div class="svc-body">
+          <span class="svc-idx">01</span>
+          <h3>Desarrollo Web Corporativo</h3>
+          <p>Sitios y plataformas con UI/UX orientado a conversión. SEO técnico, velocidad y generación de leads desde el día uno.</p>
+          <div class="svc-chips"><span>React</span><span>Next.js</span><span>CMS</span></div>
         </div>
-        <h3>Desarrollo de Software a Medida</h3>
-        <p>Aplicaciones web, móvil y sistemas empresariales construidos exactamente para tus procesos. Sin plantillas, sin atajos.</p>
-        <div class="svc-chips">
-          <span>Apps Web</span><span>Mobile</span><span>APIs</span><span>Automatización</span>
-        </div>
-        <div class="svc-arrow">→</div>
-        <div class="svc-bg-glow"></div>
       </div>
 
-      <div class="svc-card reveal" style="--d:.05s">
-        <div class="svc-num">02</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1.8"/><path d="M20 7v13l7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/></svg>
+      <div class="svc-card reveal" style="--d:.06s">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75" alt="Inteligencia de datos" loading="lazy"/>
+        <div class="svc-body">
+          <span class="svc-idx">02</span>
+          <h3>Inteligencia de Datos &amp; BI</h3>
+          <p>Dashboards interactivos y análisis predictivo para decisiones basadas en datos reales, no en intuiciones.</p>
+          <div class="svc-chips"><span>Power BI</span><span>Looker</span><span>Python</span></div>
         </div>
-        <h3>Ingeniería de Datos</h3>
-        <p>Pipelines ETL, data warehouses y dashboards que convierten datos crudos en decisiones estratégicas en tiempo real.</p>
-        <div class="svc-chips"><span>ETL/ELT</span><span>Data Lake</span><span>Dashboards</span></div>
-        <div class="svc-arrow">→</div>
-        <div class="svc-bg-glow"></div>
       </div>
 
-      <div class="svc-card reveal" style="--d:.10s">
-        <div class="svc-num">03</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 40 40" fill="none"><path d="M6 32l7-12 5 7 7-14 9 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="svc-card reveal" style="--d:.12s">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75" alt="Automatización ETL" loading="lazy"/>
+        <div class="svc-body">
+          <span class="svc-idx">03</span>
+          <h3>Automatización &amp; ETL</h3>
+          <p>Pipelines de datos con integración SUNAT, Aduanas y CRM. Elimina procesos manuales y errores costosos.</p>
+          <div class="svc-chips"><span>ETL</span><span>Airflow</span><span>SQL</span></div>
         </div>
-        <h3>BI &amp; Analytics</h3>
-        <p>KPIs, métricas y visualizaciones que tu equipo directivo realmente entiende y usa para tomar decisiones.</p>
-        <div class="svc-chips"><span>Power BI</span><span>Looker</span><span>Predictivos</span></div>
-        <div class="svc-arrow">→</div>
-        <div class="svc-bg-glow"></div>
       </div>
 
-      <div class="svc-card reveal" style="--d:.15s">
-        <div class="svc-num">04</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 40 40" fill="none"><rect x="5" y="5" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="23" y="5" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="5" y="23" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M29 23v5m0 5v-5m0 0h-5m5 0h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div class="svc-card reveal" style="--d:.06s">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75" alt="Software a medida" loading="lazy"/>
+        <div class="svc-body">
+          <span class="svc-idx">04</span>
+          <h3>Software a Medida</h3>
+          <p>CRMs personalizados, cotizadores y portales de clientes diseñados para tu operación exacta. Sin plantillas.</p>
+          <div class="svc-chips"><span>Node.js</span><span>APIs</span><span>Mobile</span></div>
         </div>
-        <h3>Diseño UI/UX</h3>
-        <p>Interfaces que enamoran a los usuarios y generan resultados de negocio. Research, wireframes y design system.</p>
-        <div class="svc-chips"><span>Research</span><span>Figma</span><span>Design System</span></div>
-        <div class="svc-arrow">→</div>
-        <div class="svc-bg-glow"></div>
       </div>
 
-      <div class="svc-card reveal" style="--d:.20s">
-        <div class="svc-num">05</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 40 40" fill="none"><path d="M7 32V14l13-9 13 9v18H7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><rect x="15" y="22" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+      <div class="svc-card reveal" style="--d:.12s">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75" alt="Analytics y forecasting" loading="lazy"/>
+        <div class="svc-body">
+          <span class="svc-idx">05</span>
+          <h3>Analytics &amp; Forecasting</h3>
+          <p>Modelos predictivos de exportaciones y análisis de mercados destino para decisiones de alto impacto.</p>
+          <div class="svc-chips"><span>ML</span><span>Pandas</span><span>Tableau</span></div>
         </div>
-        <h3>Sitios Web Corporativos</h3>
-        <p>Presencia digital que genera confianza y convierte visitas en leads calificados para tu equipo comercial.</p>
-        <div class="svc-chips"><span>Landing</span><span>Multiidioma</span><span>SEO</span></div>
-        <div class="svc-arrow">→</div>
-        <div class="svc-bg-glow"></div>
       </div>
 
-      <div class="svc-card reveal" style="--d:.25s">
-        <div class="svc-num">06</div>
-        <div class="svc-icon">
-          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1.8"/><path d="M13 20h14M20 13v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div class="svc-card reveal" style="--d:.18s">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75" alt="Consultoría digital" loading="lazy"/>
+        <div class="svc-body">
+          <span class="svc-idx">06</span>
+          <h3>Consultoría Digital</h3>
+          <p>Estrategia tecnológica, auditoría y hoja de ruta para escalar con criterio. CTO as a Service disponible.</p>
+          <div class="svc-chips"><span>Roadmap</span><span>Auditoría</span><span>CTO aaS</span></div>
         </div>
-        <h3>Consultoría Tecnológica</h3>
-        <p>Roadmap digital, auditoría tecnológica y CTO as a Service para decisiones con visión de largo plazo.</p>
-        <div class="svc-chips"><span>Auditoría</span><span>Roadmap</span><span>CTO aaS</span></div>
-        <div class="svc-arrow">→</div>
-        <div class="svc-bg-glow"></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- wave divider -->
-<div class="wave-divider wave-divider--up">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,60 1440,40 L1440,80 L0,80 Z" fill="#080F1E"/>
+<!-- wave -->
+<div class="wave-sep wave-sep--alt">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,60 L0,60 Z" fill="#f8fafc"/>
   </svg>
 </div>
 
-<!-- ═══════════════ PROCESO ═══════════════ -->
-<section class="section section--dark" id="proceso">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="s-tag">Proceso</span>
-      <h2 class="s-title">Cómo trabajamos<br/><span class="text-gold">contigo</span></h2>
-      <p class="s-sub">Un proceso probado que garantiza claridad, calidad y entrega sin sorpresas.</p>
+<!-- ═══ METODOLOGÍA ═══ -->
+<section class="section section--alt" id="metodologia">
+  <div class="container">
+    <div class="section-hd">
+      <p class="section-tag">Metodología</p>
+      <h2>Cómo <b>trabajamos</b></h2>
+      <p>Un proceso lineal, predecible y sin sorpresas. Cada fase tiene entregables claros y aprobación del cliente.</p>
     </div>
-
-    <div class="process-flow">
-      <div class="process-line"></div>
-
-      <div class="process-step reveal">
-        <div class="ps-num">01</div>
-        <div class="ps-dot"></div>
-        <div class="ps-body">
-          <h3>Discovery</h3>
-          <p>Entendemos tu negocio, objetivos y usuarios reales. Definimos el alcance con claridad total antes de escribir una línea de código.</p>
+    <div class="method-grid">
+      <div class="method-steps">
+        <div class="method-item reveal">
+          <span class="method-phase">Fase 01</span>
+          <div>
+            <h3>Discovery &amp; Alcance</h3>
+            <p>Analizamos tu negocio, validamos requerimientos y definimos el alcance exacto. Nada empieza sin esto.</p>
+          </div>
+        </div>
+        <div class="method-item reveal" style="--d:.06s">
+          <span class="method-phase">Fase 02</span>
+          <div>
+            <h3>Diseño UI/UX</h3>
+            <p>Wireframes y prototipo visual adaptado a tu identidad. Aprobación del cliente antes de escribir una línea de código.</p>
+          </div>
+        </div>
+        <div class="method-item reveal" style="--d:.12s">
+          <span class="method-phase">Fase 03</span>
+          <div>
+            <h3>Desarrollo</h3>
+            <p>Sprints semanales con actualizaciones de avance. Código limpio, documentado y revisable en tiempo real.</p>
+          </div>
+        </div>
+        <div class="method-item reveal" style="--d:.18s">
+          <span class="method-phase">Fase 04</span>
+          <div>
+            <h3>Integración &amp; QA</h3>
+            <p>Pruebas exhaustivas en todos los dispositivos. Cero lanzamientos sin validación completa del cliente.</p>
+          </div>
+        </div>
+        <div class="method-item reveal" style="--d:.24s">
+          <span class="method-phase">Fase 05</span>
+          <div>
+            <h3>Lanzamiento &amp; Entrega</h3>
+            <p>Publicación, hosting, SSL, capacitación y soporte inicial incluido en cada proyecto.</p>
+          </div>
         </div>
       </div>
-      <div class="process-step reveal" style="--d:.07s">
-        <div class="ps-num">02</div>
-        <div class="ps-dot"></div>
-        <div class="ps-body">
-          <h3>Diseño</h3>
-          <p>Wireframes, arquitectura de información y diseño visual aprobado por ti antes de desarrollar.</p>
-        </div>
-      </div>
-      <div class="process-step reveal" style="--d:.14s">
-        <div class="ps-num">03</div>
-        <div class="ps-dot"></div>
-        <div class="ps-body">
-          <h3>Desarrollo</h3>
-          <p>Sprints semanales con demos reales. Código limpio, documentado y listo para escalar desde el día uno.</p>
-        </div>
-      </div>
-      <div class="process-step reveal" style="--d:.21s">
-        <div class="ps-num">04</div>
-        <div class="ps-dot"></div>
-        <div class="ps-body">
-          <h3>Validación</h3>
-          <p>Testing exhaustivo, revisión contigo y ajustes finales. Lanzamos solo cuando todo está perfecto.</p>
-        </div>
-      </div>
-      <div class="process-step reveal" style="--d:.28s">
-        <div class="ps-num">05</div>
-        <div class="ps-dot"></div>
-        <div class="ps-body">
-          <h3>Lanzamiento</h3>
-          <p>Publicación, capacitación y soporte post-lanzamiento. Tu equipo toma el control con confianza total.</p>
+      <div class="method-img reveal" style="--d:.1s">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo trabajando" loading="lazy"/>
+        <div class="method-img-card">
+          <strong>Entrega promedio</strong>
+          <span>3 – 8 semanas</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- wave divider -->
-<div class="wave-divider wave-divider--down">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,20 1440,40 L1440,0 L0,0 Z" fill="#080F1E"/>
+<!-- wave -->
+<div class="wave-sep">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C480,60 960,0 1440,30 L1440,0 L0,0 Z" fill="#f8fafc"/>
   </svg>
 </div>
 
-<!-- ═══════════════ NOSOTROS ═══════════════ -->
+<!-- ═══ POR QUÉ NOSOTROS ═══ -->
 <section class="section" id="nosotros">
-  <div class="wrap">
+  <div class="container">
     <div class="why-grid">
-      <div class="why-left reveal">
-        <span class="s-tag">¿Por qué nosotros?</span>
-        <h2 class="s-title">Socios estratégicos,<br/><span class="text-gold">no solo developers</span></h2>
-        <p class="s-sub">Entendemos tu negocio antes de escribir una sola línea de código.</p>
+      <div class="why-copy reveal">
+        <p class="section-tag">¿Por qué nosotros?</p>
+        <h2>Socios estratégicos,<br/><b>no solo developers</b></h2>
+        <p class="why-sub">Entendemos tu negocio antes de escribir una sola línea de código. Hablamos el idioma de negocio, no solo el técnico.</p>
         <div class="why-list">
-          <div class="why-item">
-            <div class="wi-icon">
-              <svg viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14.4l-4.8 2.5.9-5.4L2.2 7.7l5.4-.8L10 2z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
-            </div>
+          <div class="why-item reveal" style="--d:.05s">
+            <div class="wi-num">01</div>
             <div>
               <strong>Enfoque en resultados</strong>
-              <p>Cada decisión técnica alineada a un objetivo de negocio medible.</p>
+              <p>Cada decisión técnica está alineada a un objetivo de negocio medible.</p>
             </div>
           </div>
-          <div class="why-item">
-            <div class="wi-icon">
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.3"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+          <div class="why-item reveal" style="--d:.1s">
+            <div class="wi-num">02</div>
             <div>
-              <strong>Equipo senior dedicado</strong>
-              <p>Trabajas directamente con quienes construyen tu solución.</p>
+              <strong>Equipo senior directo</strong>
+              <p>Hablas con quien hace el trabajo. Sin intermediarios ni juniors ocultos.</p>
             </div>
           </div>
-          <div class="why-item">
-            <div class="wi-icon">
-              <svg viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            </div>
+          <div class="why-item reveal" style="--d:.15s">
+            <div class="wi-num">03</div>
             <div>
               <strong>Comunicación transparente</strong>
-              <p>Demos semanales y acceso directo al equipo en todo momento.</p>
+              <p>Demos semanales, avances en tiempo real y acceso directo al equipo.</p>
             </div>
           </div>
-          <div class="why-item">
-            <div class="wi-icon">
-              <svg viewBox="0 0 20 20" fill="none"><path d="M10 2v16M2 10h16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            </div>
+          <div class="why-item reveal" style="--d:.2s">
+            <div class="wi-num">04</div>
             <div>
               <strong>Escalabilidad desde el día 1</strong>
-              <p>Arquitecturas pensadas para crecer contigo, no para rehacer.</p>
+              <p>Arquitecturas que crecen contigo. No construimos para rehacer.</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="why-right reveal" style="--d:.1s">
-        <div class="stat-mosaic">
-          <div class="sm-card sm-card--accent">
-            <div>
-              <div class="sm-num">+50</div>
-              <div class="sm-lbl">Proyectos entregados</div>
-            </div>
-            <div class="sm-icon">
-              <svg viewBox="0 0 32 32" fill="none"><path d="M4 28l7-12 5 7 7-13 9 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+      <div class="why-visual reveal" style="--d:.12s">
+        <div class="why-mosaic">
+          <div class="wm-card wm-card--blue">
+            <div class="wm-num">+50</div>
+            <div class="wm-lbl">Proyectos entregados</div>
+            <svg viewBox="0 0 32 32" fill="none" class="wm-icon"><path d="M4 26l6-10 4 6 6-11 8 15" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <div class="sm-card">
-            <div class="sm-num">98%</div>
-            <div class="sm-lbl">Satisfacción del cliente</div>
-            <div class="sm-stars">★★★★★</div>
+          <div class="wm-card">
+            <div class="wm-num">98%</div>
+            <div class="wm-lbl">Satisfacción cliente</div>
+            <div class="wm-stars">★★★★★</div>
           </div>
-          <div class="sm-card">
-            <div class="sm-num">3–8</div>
-            <div class="sm-lbl">Semanas de entrega</div>
-            <div class="sm-sub">vs 4–6 meses del mercado</div>
+          <div class="wm-card">
+            <div class="wm-num">3–8</div>
+            <div class="wm-lbl">Semanas de entrega</div>
+            <div class="wm-sub">vs 4–6 meses del mercado</div>
           </div>
-          <div class="sm-card sm-card--dark">
-            <div class="sm-num">+5</div>
-            <div class="sm-lbl">Países de alcance</div>
-            <div class="sm-flags">🇵🇪 🇨🇱 🇨🇴 🇲🇽 🇺🇸</div>
+          <div class="wm-card wm-card--dark">
+            <div class="wm-num">+5</div>
+            <div class="wm-lbl">Países de alcance</div>
+            <div class="wm-flags">🇵🇪 🇨🇱 🇨🇴 🇲🇽 🇺🇸</div>
           </div>
         </div>
       </div>
@@ -400,314 +315,256 @@
   </div>
 </section>
 
-<!-- wave divider -->
-<div class="wave-divider wave-divider--up">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,20 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="#080F1E"/>
+<!-- wave -->
+<div class="wave-sep wave-sep--alt">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#f8fafc"/>
   </svg>
 </div>
 
-<!-- ═══════════════ PAQUETES ═══════════════ -->
-<section class="section section--dark" id="paquetes">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="s-tag">Inversión</span>
-      <h2 class="s-title">Planes para cada<br/><span class="text-gold">etapa de tu empresa</span></h2>
-      <p class="s-sub">Precios claros, sin sorpresas. Todos incluyen diseño responsive y soporte post-lanzamiento.</p>
+<!-- ═══ SOLUCIONES ═══ -->
+<section class="section section--alt" id="soluciones">
+  <div class="container">
+    <div class="section-hd">
+      <p class="section-tag">Inversión</p>
+      <h2>Niveles de <b>servicio</b></h2>
+      <p>Tres niveles para distintos momentos del crecimiento. Cada propuesta se cotiza según el alcance validado.</p>
     </div>
-
     <div class="plans-grid">
+
       <div class="plan-card reveal">
-        <div class="plan-tier">Básico</div>
+        <div class="plan-badge plan-badge--soft">Esencial</div>
+        <h3>Presencia Digital</h3>
+        <p class="plan-desc">Para empresas que necesitan una web profesional que posicione su marca y genere contactos calificados.</p>
         <div class="plan-price">
-          <span class="plan-from">desde</span>
-          <span class="plan-num">$1,500</span>
-          <span class="plan-cur">USD</span>
+          <span class="from">desde</span>
+          <strong>$1,500</strong>
+          <span class="cur">USD</span>
         </div>
-        <p class="plan-desc">Presencia digital profesional para arrancar con fuerza.</p>
-        <div class="plan-divider"></div>
+        <div class="plan-div"></div>
         <ul class="plan-feats">
-          <li><span class="feat-check">✓</span>Sitio de hasta 5 páginas</li>
-          <li><span class="feat-check">✓</span>Diseño responsive</li>
-          <li><span class="feat-check">✓</span>Formulario de contacto</li>
-          <li><span class="feat-check">✓</span>SEO básico incluido</li>
-          <li><span class="feat-check">✓</span>Redes sociales integradas</li>
-          <li><span class="feat-check">✓</span>Soporte 30 días</li>
+          <li><span>▹</span>Sitio web hasta 5 páginas</li>
+          <li><span>▹</span>Diseño responsive</li>
+          <li><span>▹</span>Formulario + WhatsApp</li>
+          <li><span>▹</span>Panel CMS incluido</li>
+          <li><span>▹</span>SEO técnico on-page</li>
+          <li><span>▹</span>Entrega en 2–3 semanas</li>
         </ul>
-        <a href="#contacto" class="plan-btn plan-btn--outline ripple">Solicitar →</a>
+        <a href="#contacto" class="plan-link ripple">Solicitar propuesta →</a>
       </div>
 
-      <div class="plan-card plan-card--pro reveal" style="--d:.08s">
-        <div class="plan-badge">Más elegido</div>
-        <div class="plan-tier">Pro</div>
+      <div class="plan-card plan-card--feat reveal" style="--d:.08s">
+        <div class="plan-badge plan-badge--blue">Recomendado</div>
+        <h3>Plataforma Comercial</h3>
+        <p class="plan-desc">Para empresas que quieren gestión, analytics y automatización integradas en una sola plataforma.</p>
         <div class="plan-price">
-          <span class="plan-from">desde</span>
-          <span class="plan-num">$3,500</span>
-          <span class="plan-cur">USD</span>
+          <span class="from">desde</span>
+          <strong>$3,500</strong>
+          <span class="cur">USD</span>
         </div>
-        <p class="plan-desc">Plataforma completa con funcionalidades avanzadas.</p>
-        <div class="plan-divider"></div>
+        <div class="plan-div"></div>
         <ul class="plan-feats">
-          <li><span class="feat-check">✓</span>Todo lo del plan Básico</li>
-          <li><span class="feat-check">✓</span>Hasta 12 páginas</li>
-          <li><span class="feat-check">✓</span>Panel de administración CMS</li>
-          <li><span class="feat-check">✓</span>Blog / noticias</li>
-          <li><span class="feat-check">✓</span>Analytics y tracking</li>
-          <li><span class="feat-check">✓</span>Integraciones avanzadas</li>
-          <li><span class="feat-check">✓</span>Soporte 60 días</li>
+          <li><span>▹</span>Todo lo de Presencia Digital</li>
+          <li><span>▹</span>Dashboard de analytics</li>
+          <li><span>▹</span>Integración CRM/ERP</li>
+          <li><span>▹</span>Automatización cotizaciones</li>
+          <li><span>▹</span>Hosting + SSL incluido</li>
+          <li><span>▹</span>Soporte prioritario 30 días</li>
+          <li><span>▹</span>Entrega en 4–5 semanas</li>
         </ul>
-        <a href="#contacto" class="plan-btn plan-btn--solid ripple">Solicitar →</a>
+        <a href="#contacto" class="plan-link plan-link--solid ripple">Solicitar propuesta →</a>
       </div>
 
       <div class="plan-card reveal" style="--d:.16s">
-        <div class="plan-tier">Premium</div>
+        <div class="plan-badge plan-badge--soft">Premium</div>
+        <h3>Inteligencia Exportadora</h3>
+        <p class="plan-desc">Para empresas que necesitan datos, forecasting y software estratégico para decisiones de largo plazo.</p>
         <div class="plan-price">
-          <span class="plan-from">desde</span>
-          <span class="plan-num">$7,000</span>
-          <span class="plan-cur">USD</span>
+          <span class="from">desde</span>
+          <strong>$7,000</strong>
+          <span class="cur">USD</span>
         </div>
-        <p class="plan-desc">Solución a medida con arquitectura cloud escalable.</p>
-        <div class="plan-divider"></div>
+        <div class="plan-div"></div>
         <ul class="plan-feats">
-          <li><span class="feat-check">✓</span>Todo lo del plan Pro</li>
-          <li><span class="feat-check">✓</span>Plataforma a medida</li>
-          <li><span class="feat-check">✓</span>Integración ERP / CRM</li>
-          <li><span class="feat-check">✓</span>Dashboard BI incluido</li>
-          <li><span class="feat-check">✓</span>Arquitectura cloud</li>
-          <li><span class="feat-check">✓</span>Capacitación al equipo</li>
-          <li><span class="feat-check">✓</span>Soporte 90 días + SLA</li>
+          <li><span>▹</span>Todo lo de Plataforma Comercial</li>
+          <li><span>▹</span>Pipeline ETL (SUNAT/Aduanas)</li>
+          <li><span>▹</span>Dashboards BI avanzados</li>
+          <li><span>▹</span>Forecasting predictivo</li>
+          <li><span>▹</span>Capacitación al equipo</li>
+          <li><span>▹</span>Mantenimiento 90 días + SLA</li>
+          <li><span>▹</span>Entrega en 6–8 semanas</li>
         </ul>
-        <a href="#contacto" class="plan-btn plan-btn--outline ripple">Solicitar →</a>
+        <a href="#contacto" class="plan-link ripple">Solicitar propuesta →</a>
       </div>
-    </div>
 
-    <p class="plans-note">* Precios referenciales. Cada proyecto se cotiza según alcance validado. <a href="#contacto">Solicita tu propuesta →</a></p>
+    </div>
+    <p class="plans-note">Propuesta a medida tras validación · 50% inicio – 50% entrega final</p>
   </div>
 </section>
 
-<!-- wave divider -->
-<div class="wave-divider wave-divider--down">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,60 C360,0 720,80 1080,30 C1260,10 1380,60 1440,50 L1440,0 L0,0 Z" fill="#080F1E"/>
+<!-- wave -->
+<div class="wave-sep">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,0 720,60 1080,20 C1260,5 1380,45 1440,30 L1440,0 L0,0 Z" fill="#f8fafc"/>
   </svg>
 </div>
 
-<!-- ═══════════════ TESTIMONIOS ═══════════════ -->
-<section class="section" id="testimonios">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="s-tag">Testimonios</span>
-      <h2 class="s-title">Lo que dicen<br/><span class="text-gold">nuestros clientes</span></h2>
+<!-- ═══ EQUIPO ═══ -->
+<section class="section" id="equipo">
+  <div class="container">
+    <div class="section-hd">
+      <p class="section-tag">Equipo</p>
+      <h2>Las personas <b>detrás</b></h2>
+      <p>Un equipo pequeño, especializado y enfocado. Hablas directo con quien hace el trabajo.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <img class="team-img" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Joan - Project Manager" loading="lazy"/>
+        <h4>Joan</h4>
+        <div class="team-role">Project Manager</div>
+        <p>Especialista en trade intelligence y exportaciones. Lidera la estrategia comercial y la relación con clientes.</p>
+      </div>
+      <div class="team-card reveal" style="--d:.08s">
+        <img class="team-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Abraham - Lead Developer" loading="lazy"/>
+        <h4>Abraham</h4>
+        <div class="team-role">Lead Developer</div>
+        <p>Arquitecto de soluciones digitales. Domina el stack completo y garantiza la calidad técnica de cada entrega.</p>
+      </div>
+      <div class="team-card reveal" style="--d:.16s">
+        <img class="team-img" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Equipo Data" loading="lazy"/>
+        <h4>Equipo Data</h4>
+        <div class="team-role">Analytics &amp; BI</div>
+        <p>Especialistas en pipelines de datos y modelos predictivos para el sector agro-exportador y empresas de alto crecimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIOS ═══ -->
+<section class="section section--alt" id="testimonios">
+  <div class="container">
+    <div class="section-hd">
+      <p class="section-tag">Testimonios</p>
+      <h2>Lo que dicen <b>nuestros clientes</b></h2>
     </div>
     <div class="testi-grid">
       <div class="testi-card reveal">
         <div class="testi-stars">★★★★★</div>
-        <p>"Andes Tech entregó nuestra plataforma en 5 semanas. Entendieron perfectamente lo que necesitábamos y ejecutaron con una calidad que no esperábamos."</p>
+        <p>"Andes Tech entregó nuestra plataforma en 5 semanas. Entendieron exactamente lo que necesitábamos y ejecutaron con una calidad que no esperábamos a ese precio."</p>
         <div class="testi-author">
-          <div class="ta-avatar">CE</div>
-          <div><strong>Carlos E.</strong><span>Director · Perú Exporta TV</span></div>
-        </div>
-      </div>
-      <div class="testi-card reveal" style="--d:.07s">
-        <div class="testi-stars">★★★★★</div>
-        <p>"Implementaron nuestro dashboard de datos en tiempo récord. Ahora tenemos visibilidad total de nuestras métricas. Lo recomiendo sin dudarlo."</p>
-        <div class="testi-author">
-          <div class="ta-avatar">ML</div>
-          <div><strong>María L.</strong><span>CEO · CorpTech SAC</span></div>
-        </div>
-      </div>
-      <div class="testi-card reveal" style="--d:.14s">
-        <div class="testi-stars">★★★★★</div>
-        <p>"La comunicación fue impecable. El resultado superó nuestras expectativas y el soporte post-lanzamiento fue excelente. Son socios estratégicos de verdad."</p>
-        <div class="testi-author">
-          <div class="ta-avatar">JR</div>
-          <div><strong>Jorge R.</strong><span>Gerente TI · LogiSur</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ CTA BAND ═══════════════ -->
-<section class="cta-section">
-  <div class="cta-wave cta-wave--top">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C480,80 960,0 1440,40 L1440,0 L0,0 Z" fill="#050D18"/>
-    </svg>
-  </div>
-  <div class="cta-orb cta-orb--1"></div>
-  <div class="cta-orb cta-orb--2"></div>
-  <div class="wrap cta-wrap">
-    <h2>¿Listo para construir<br/><span class="text-gold">tu próximo proyecto?</span></h2>
-    <p>Agenda una reunión sin costo. En 30 minutos validamos tu alcance y te damos una propuesta real.</p>
-    <a href="#contacto" class="btn-main ripple">Agendar reunión gratuita</a>
-  </div>
-  <div class="cta-wave cta-wave--bottom">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,60 1440,50 L1440,80 L0,80 Z" fill="#050D18"/>
-    </svg>
-  </div>
-</section>
-
-<!-- ═══════════════ CONTACTO ═══════════════ -->
-<section class="section contact-section" id="contacto">
-  <!-- ondas de fondo animadas -->
-  <div class="contact-waves" aria-hidden="true">
-    <svg class="cw cw-1" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#1F4E79" fill-opacity="0.12" d="M0,192L48,197.3C96,203,192,213,288,208C384,203,480,181,576,186.7C672,192,768,224,864,234.7C960,245,1056,235,1152,213.3C1248,192,1344,160,1392,144L1440,128L1440,320L0,320Z"/>
-    </svg>
-    <svg class="cw cw-2" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#C9A84C" fill-opacity="0.06" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,112C672,128,768,192,864,202.7C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,320L0,320Z"/>
-    </svg>
-  </div>
-
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="s-tag">Contacto</span>
-      <h2 class="s-title">¿Tienes un <span class="text-gold">proyecto en mente?</span></h2>
-      <p class="s-sub">Cuéntanos tu idea y te sorprenderemos con una propuesta a medida en menos de 48 h.</p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="ci-items">
-          <a href="mailto:hola@andestechdata.com" class="ci-item">
-            <div class="ci-ico">
-              <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            </div>
-            <span>hola@andestechdata.com</span>
-          </a>
-          <a href="https://wa.me/51999000000" target="_blank" rel="noopener" class="ci-item">
-            <div class="ci-ico">
-              <svg viewBox="0 0 20 20" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
-            </div>
-            <span>+51 999 000 000</span>
-          </a>
-          <div class="ci-item">
-            <div class="ci-ico">
-              <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6.7 2 4 4.7 4 8c0 4.4 6 10 6 10s6-5.6 6-10c0-3.3-2.7-6-6-6z" stroke="currentColor" stroke-width="1.3"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.3"/></svg>
-            </div>
-            <span>Lima, Perú – alcance regional</span>
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Carlos E." loading="lazy"/>
+          <div>
+            <strong>Carlos E.</strong>
+            <span>Director · Perú Exporta TV</span>
           </div>
         </div>
-
-        <div class="contact-promise">
-          <div class="cp-icon">⚡</div>
+      </div>
+      <div class="testi-card reveal" style="--d:.08s">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Implementaron nuestro dashboard de datos en tiempo récord. Ahora tenemos visibilidad total de nuestras métricas de negocio. Lo recomiendo sin dudarlo."</p>
+        <div class="testi-author">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="María L." loading="lazy"/>
           <div>
-            <strong>Respuesta en menos de 24 h</strong>
+            <strong>María L.</strong>
+            <span>CEO · CorpTech SAC</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal" style="--d:.16s">
+        <div class="testi-stars">★★★★★</div>
+        <p>"La comunicación fue impecable en todo momento. El resultado superó nuestras expectativas. Son realmente socios estratégicos, no solo proveedores."</p>
+        <div class="testi-author">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jorge R." loading="lazy"/>
+          <div>
+            <strong>Jorge R.</strong>
+            <span>Gerente TI · LogiSur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACTO ═══ -->
+<section class="section contact-section" id="contacto">
+  <!-- ondas SVG animadas de fondo -->
+  <div class="contact-waves" aria-hidden="true">
+    <svg class="cw cw-1" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="rgba(255,255,255,0.06)" d="M0,192L48,197.3C96,203,192,213,288,208C384,203,480,181,576,186.7C672,192,768,224,864,234.7C960,245,1056,235,1152,213.3C1248,192,1344,160,1392,144L1440,128L1440,320L0,320Z"/>
+    </svg>
+    <svg class="cw cw-2" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="rgba(255,255,255,0.04)" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,112C672,128,768,192,864,202.7C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,320L0,320Z"/>
+    </svg>
+  </div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-hd section-hd--white">
+      <p class="section-tag section-tag--white">Contacto</p>
+      <h2>¿Tienes un proyecto <b>en mente?</b></h2>
+      <p>Cuéntanos tu idea y te sorprenderemos con una propuesta a medida en menos de 48 h. Sin compromiso.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a href="mailto:info@andestechdata.com" class="ci-row">
+          <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <span>info@andestechdata.com</span>
+        </a>
+        <a href="https://wa.me/51999000000" target="_blank" rel="noopener" class="ci-row">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.4"/><path d="M7 8.5c0 3.5 5 6 6.5 4.5l.5-1.5-2-.5-.5 1c-.5 0-2.5-1.5-2.5-2.5l1-.5L9 7.5 7 8.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          <span>+51 999 000 000</span>
+        </a>
+        <div class="ci-row">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6.7 2 4 4.7 4 8c0 4.4 6 10 6 10s6-5.6 6-10c0-3.3-2.7-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span>Lima, Perú · Alcance regional</span>
+        </div>
+        <div class="ci-promise">
+          <span class="ci-promise-icon">⚡</span>
+          <div>
+            <strong>Respuesta garantizada en 24 h</strong>
             <p>Un experto de nuestro equipo te contactará a la brevedad.</p>
           </div>
         </div>
       </div>
 
-      <!-- FORMULARIO GLASS -->
-      <div class="glass-form reveal" style="--d:.1s">
-        <form id="contactForm">
-          <div class="cf-row">
-            <div class="cf-field">
-              <label>Nombre completo</label>
-              <input type="text" placeholder="Ej. Juan Pérez" required class="input-pill"/>
-            </div>
-            <div class="cf-field">
-              <label>Correo electrónico</label>
-              <input type="email" placeholder="juan@empresa.com" required class="input-pill"/>
-            </div>
+      <form class="contact-form reveal" style="--d:.1s" id="contactForm">
+        <div class="cf-row">
+          <div class="cf-field">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Ej. Juan Pérez" required class="cf-input"/>
           </div>
           <div class="cf-field">
-            <label>Teléfono (opcional)</label>
-            <input type="tel" placeholder="+51 999 999 999" class="input-pill"/>
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="juan@empresa.com" required class="cf-input"/>
           </div>
-          <div class="cf-field">
-            <label>Servicio de interés</label>
-            <select class="input-pill">
-              <option value="">Seleccionar servicio...</option>
-              <option>Desarrollo de Software a Medida</option>
-              <option>Ingeniería de Datos</option>
-              <option>BI &amp; Analytics</option>
-              <option>Diseño UI/UX</option>
-              <option>Sitio Web Corporativo</option>
-              <option>Consultoría Tecnológica</option>
-              <option>Otro / No sé aún</option>
-            </select>
-          </div>
-          <div class="cf-field">
-            <label>¿En qué podemos ayudarte?</label>
-            <textarea rows="4" placeholder="Cuéntanos brevemente tu proyecto..." required class="input-pill input-textarea"></textarea>
-          </div>
-          <div class="cf-privacy">
-            <input type="checkbox" id="privacy" required/>
-            <label for="privacy">He leído y acepto la <a href="#">política de privacidad</a>.</label>
-          </div>
-          <button type="submit" class="btn-main btn-main--full ripple" id="submitBtn">
-            <span id="submitTxt">Enviar mensaje</span>
-            <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <p class="cf-note">Respuesta garantizada en menos de 24 h hábiles.</p>
-        </form>
-
-        <div id="thankYou" class="thank-you" style="display:none">
-          <div class="ty-emoji">🚀</div>
-          <h3>¡Mensaje enviado!</h3>
-          <p>Gracias por contactarnos. Uno de nuestros expertos te escribirá a la brevedad.</p>
         </div>
-      </div>
+        <div class="cf-field">
+          <label>Teléfono (opcional)</label>
+          <input type="tel" placeholder="+51 999 999 999" class="cf-input"/>
+        </div>
+        <div class="cf-field">
+          <label>¿En qué podemos ayudarte?</label>
+          <textarea rows="4" placeholder="Cuéntanos brevemente tu proyecto..." required class="cf-input cf-textarea"></textarea>
+        </div>
+        <button type="submit" class="cta-btn ripple" id="submitBtn">
+          <span id="submitTxt">Enviar mensaje →</span>
+        </button>
+        <div id="formFeedback"></div>
+        <p class="cf-note">También puedes escribirnos a <strong>info@andestechdata.com</strong> o vía WhatsApp.</p>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
+<!-- ═══ FOOTER ═══ -->
 <footer class="footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="brand">
-        <div class="brand-mark">
-          <svg viewBox="0 0 32 32" fill="none">
-            <polygon points="16,2 30,28 2,28" stroke="url(#lg3)" stroke-width="2" fill="none"/>
-            <defs><linearGradient id="lg3" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#C9A84C"/>
-              <stop offset="100%" stop-color="#2F75B5"/>
-            </linearGradient></defs>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">Andes<em>Tech</em></span>
-          <span class="brand-sub">&amp; Data Partners</span>
-        </div>
-      </a>
-      <p>Convertimos estrategia en software.<br/>Lima, Perú.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.3"/><path d="M6 8v6M6 5.5v.5M10 14v-3.5a2 2 0 014 0V14M10 8v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-        </a>
-        <a href="#" aria-label="WhatsApp">
-          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.3"/><path d="M7 8.5c0 3.5 5 6 6.5 4.5l.5-1.5-2-.5-.5 1c-.5 0-2.5-1.5-2.5-2.5l1-.5L9 7.5 7 8.5z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.3"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.3"/><circle cx="14" cy="6" r=".8" fill="currentColor"/></svg>
-        </a>
-      </div>
-    </div>
+  <div class="container footer-inner">
+    <a href="#" class="logo">ANDES<em>tech</em> <span>&amp; Data Partners</span></a>
     <div class="footer-links">
-      <div class="fl-col">
-        <h4>Servicios</h4>
-        <a href="#servicios">Desarrollo de Software</a>
-        <a href="#servicios">Ingeniería de Datos</a>
-        <a href="#servicios">BI &amp; Analytics</a>
-        <a href="#servicios">Diseño UI/UX</a>
-        <a href="#servicios">Consultoría</a>
-      </div>
-      <div class="fl-col">
-        <h4>Empresa</h4>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+      <a href="#servicios">Servicios</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
     </div>
-  </div>
-  <div class="wrap footer-bottom">
-    <span>© 2025 Andes Tech &amp; Data Partners · Lima, Perú</span>
-    <span class="footer-tagline">We turn strategy into software.</span>
+    <p>© 2026 · Lima, Perú · <em>We turn strategy into software.</em></p>
   </div>
 </footer>
 
