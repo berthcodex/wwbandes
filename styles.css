@@ -282,25 +282,32 @@ input,select,textarea { font-family:inherit; }
 
 .marquee-track {
   display:flex; gap:1rem; width:max-content;
-  animation:marqueeScroll 36s linear infinite;
+  animation:marqueeScroll 42s linear infinite;
 }
 .marquee-track:hover { animation-play-state:paused; }
 @keyframes marqueeScroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 .client-badge {
-  display:inline-flex; align-items:center; gap:10px;
-  padding:10px 20px;
-  border:1.5px solid var(--border); border-radius:9999px;
-  background:#fff; font-size:.875rem; font-weight:600; color:var(--text-l);
-  white-space:nowrap; box-shadow:var(--sh-sm);
-  transition:border-color .2s, color .2s, box-shadow .2s, transform .2s var(--spring);
+  display:inline-flex; align-items:center; gap:12px;
+  padding:10px 18px 10px 10px;
+  border:1.5px solid var(--border); border-radius:12px;
+  background:#fff; white-space:nowrap; box-shadow:var(--sh-sm);
+  transition:border-color .22s, box-shadow .22s, transform .22s var(--spring);
   cursor:default;
 }
-.client-badge:hover { border-color:var(--accent-b); color:var(--accent); box-shadow:var(--sh-md); transform:translateY(-3px); }
-.client-badge img {
-  width:26px; height:26px; border-radius:50%; object-fit:cover;
-  border:1.5px solid var(--border); flex-shrink:0;
+.client-badge:hover { border-color:rgba(30,74,122,.3); box-shadow:var(--sh-md); transform:translateY(-3px); }
+
+/* logo monogram */
+.cb-logo {
+  width:36px; height:36px; border-radius:8px;
+  background:var(--cc, var(--accent)); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.7rem; font-weight:800; letter-spacing:.02em;
+  flex-shrink:0;
 }
+.cb-info { display:flex; flex-direction:column; gap:1px; }
+.cb-name { font-size:.82rem; font-weight:700; color:var(--text); line-height:1.2; }
+.cb-sector { font-size:.66rem; color:var(--text-ll); font-weight:500; }
 
 /* ── BENTO GRID SERVICES ─────────────────────── */
 .bento-grid {
@@ -339,6 +346,16 @@ input,select,textarea { font-family:inherit; }
 .bc-icon-wrap { padding:2rem 2rem 0; color:var(--accent); }
 .bc-icon-wrap svg { width:52px; height:52px; }
 
+/* Image at top for single-column bento cards */
+.bc-img-top {
+  height:168px; overflow:hidden; position:relative; flex-shrink:0;
+}
+.bc-img-top img {
+  width:100%; height:100%; object-fit:cover;
+  transition:transform .5s var(--ease);
+}
+.bento-card:hover .bc-img-top img { transform:scale(1.06); }
+
 .bc-body { padding:1.6rem 2rem 2rem; }
 .bc-idx {
   font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
@@ -361,10 +378,23 @@ input,select,textarea { font-family:inherit; }
 .sector-card {
   padding:2rem 2.2rem; border-radius:var(--r);
   border:1.5px solid var(--border); background:#fff;
-  box-shadow:var(--sh-sm);
+  box-shadow:var(--sh-sm); overflow:hidden; position:relative;
   transition:transform .28s var(--spring), box-shadow .28s, border-color .28s;
 }
-.sector-card:hover { transform:translateY(-5px); box-shadow:var(--sh-lg); border-color:rgba(59,130,246,.35); }
+.sector-card:hover { transform:translateY(-5px); box-shadow:var(--sh-lg); border-color:rgba(30,74,122,.25); }
+.sector-card:hover .sector-bg { opacity:1; }
+
+/* Background image reveal on hover */
+.sector-bg {
+  position:absolute; inset:0; opacity:0;
+  transition:opacity .4s var(--ease); z-index:0;
+}
+.sector-bg img { width:100%; height:100%; object-fit:cover; }
+.sector-bg::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(160deg, rgba(238,244,255,.96) 0%, rgba(255,255,255,.92) 100%);
+}
+.sector-card > *:not(.sector-bg) { position:relative; z-index:1; }
 
 .sector-icon {
   width:52px; height:52px; border-radius:14px;
@@ -376,7 +406,18 @@ input,select,textarea { font-family:inherit; }
 .sector-icon svg { width:26px; height:26px; }
 .sector-card:hover .sector-icon { background:var(--accent); color:#fff; transform:scale(1.08); }
 .sector-card h4 { font-size:1.05rem; font-weight:700; color:var(--text); margin-bottom:.5rem; }
-.sector-card p { font-size:.855rem; color:var(--text-l); line-height:1.65; }
+.sector-card p { font-size:.855rem; color:var(--text-l); line-height:1.65; margin-bottom:.9rem; }
+
+/* Sector tag */
+.sector-tag {
+  display:inline-block; font-size:.65rem; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--accent); background:var(--accent-soft);
+  border:1px solid rgba(30,74,122,.15);
+  padding:3px 10px; border-radius:9999px;
+  transition:background .2s, color .2s;
+}
+.sector-card:hover .sector-tag { background:var(--accent); color:#fff; }
 
 /* ── METHODOLOGY ─────────────────────────────── */
 .method-grid {
@@ -503,6 +544,12 @@ input,select,textarea { font-family:inherit; }
   transition:transform .28s var(--spring), box-shadow .28s, border-color .28s;
 }
 .team-card:hover { transform:translateY(-6px); box-shadow:var(--sh-lg); border-color:var(--accent-b); }
+.team-card--featured {
+  border-color:rgba(30,74,122,.25);
+  background:linear-gradient(160deg, #ffffff 60%, var(--accent-xsoft) 100%);
+  box-shadow:var(--sh-md);
+}
+.team-card--featured:hover { border-color:var(--accent); box-shadow:var(--sh-xl); }
 .team-avatar-wrap {
   width:88px; height:88px; border-radius:50%; overflow:hidden;
   margin:0 auto 1.2rem;
