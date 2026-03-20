@@ -536,8 +536,16 @@ input,select,textarea { font-family:inherit; }
 .plan-quote--white { color:var(--accent); background:var(--accent-soft); border-color:rgba(30,74,122,.15); }
 
 /* ── TEAM ────────────────────────────────────── */
-.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+.team-grid {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:1.5rem;
+}
 .team-card {
+  flex:1 1 calc(33.333% - 1.5rem);
+  max-width:340px;
+  min-width:240px;
   background:#fff; border:1.5px solid var(--border);
   border-radius:var(--r); padding:2rem; text-align:center;
   box-shadow:var(--sh-sm);
@@ -730,7 +738,8 @@ input,select,textarea { font-family:inherit; }
   .why-grid { grid-template-columns:1fr; gap:3rem; }
   .plans-grid { grid-template-columns:1fr; max-width:460px; margin:0 auto; }
   .sectors-grid { grid-template-columns:repeat(2,1fr); }
-  .team-grid { grid-template-columns:repeat(2,1fr); }
+  .team-grid { gap:1.2rem; }
+  .team-card { flex:1 1 calc(50% - 1.2rem); max-width:360px; }
   .contact-card { grid-template-columns:1fr; }
   .partners-grid { grid-template-columns:repeat(4,1fr); }
   .bento-grid { grid-template-columns:repeat(2,1fr); }
@@ -752,7 +761,7 @@ input,select,textarea { font-family:inherit; }
   .bento-grid { grid-template-columns:1fr; }
   .bento-card--lg, .bento-card--wide { grid-column:span 1; }
   .sectors-grid { grid-template-columns:1fr; }
-  .team-grid { grid-template-columns:1fr 1fr; }
+  .team-card { flex:1 1 calc(50% - 1rem); max-width:340px; }
   .testi-grid { grid-template-columns:1fr; }
   .why-mosaic { grid-template-columns:1fr; }
   .wm-card--blue { grid-column:span 1; flex-direction:column; }
@@ -768,6 +777,6 @@ input,select,textarea { font-family:inherit; }
   .hero-title { font-size:2.6rem; }
   .hero-actions { flex-direction:column; align-items:stretch; }
   .btn-primary, .btn-ghost { text-align:center; justify-content:center; }
-  .team-grid { grid-template-columns:1fr; }
+  .team-card { flex:1 1 100%; max-width:420px; }
   .section-hd h2 { font-size:1.7rem; }
 }
