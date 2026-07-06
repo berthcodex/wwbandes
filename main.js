@@ -1,6 +1,6 @@
 /* ============================
-   ANDES TECH & DATA PARTNERS
-   main.js – v6 Dramatic · Editorial
+   HIDATA GROUP
+   main.js – v8 Refresh
    ============================ */
 
 // ── Nav scroll (transparent → solid) ─────────
