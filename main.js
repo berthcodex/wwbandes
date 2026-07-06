@@ -90,23 +90,20 @@ document.querySelectorAll('.spotlight-card').forEach(card => {
   });
 });
 
-// ── Hero parallax: glow follows mouse ────────
+// ── Hero spotlight: glow follows cursor ──────
 const heroSection = document.querySelector('.hero');
-if (heroSection) {
+const heroSpot    = document.getElementById('heroSpot');
+if (heroSection && heroSpot) {
   heroSection.addEventListener('mousemove', function(e) {
     const rect = heroSection.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width  - 0.5;
-    const y = (e.clientY - rect.top)  / rect.height - 0.5;
-    const g1 = heroSection.querySelector('.hero-glow--1');
-    const g2 = heroSection.querySelector('.hero-glow--2');
-    if (g1) g1.style.transform = `translate(${x * 24}px, ${y * 24}px)`;
-    if (g2) g2.style.transform = `translate(${x * -16}px, ${y * -16}px)`;
-  });
+    const x = ((e.clientX - rect.left) / rect.width)  * 100;
+    const y = ((e.clientY - rect.top)  / rect.height) * 100;
+    heroSpot.style.setProperty('--mx', `${x}%`);
+    heroSpot.style.setProperty('--my', `${y}%`);
+  }, { passive: true });
   heroSection.addEventListener('mouseleave', () => {
-    const g1 = heroSection.querySelector('.hero-glow--1');
-    const g2 = heroSection.querySelector('.hero-glow--2');
-    if (g1) g1.style.transform = '';
-    if (g2) g2.style.transform = '';
+    heroSpot.style.setProperty('--mx', '50%');
+    heroSpot.style.setProperty('--my', '30%');
   });
 }
 

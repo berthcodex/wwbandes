@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css?v=10"/>
+  <link rel="stylesheet" href="styles.css?v=11"/>
 </head>
 <body>
 
@@ -36,144 +36,38 @@
 
 <!-- ═══ HERO ═══ -->
 <section class="hero" id="inicio">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-glow hero-glow--1"></div>
-    <div class="hero-glow hero-glow--2"></div>
-    <div class="hero-grid-lines"></div>
+  <div class="hero-canvas" aria-hidden="true">
+    <span class="aurora aurora--1"></span>
+    <span class="aurora aurora--2"></span>
+    <span class="aurora aurora--3"></span>
+    <span class="hero-mesh"></span>
+    <span class="hero-spot" id="heroSpot"></span>
+    <span class="hero-noise"></span>
   </div>
   <div class="container">
-    <div class="hero-grid">
-
-      <!-- ── Columna texto ── -->
-      <div class="hero-copy">
-        <span class="hero-badge reveal" style="--d:.02s">
-          <span class="hb-dot"></span>
-          Software · Datos · Inteligencia de negocio
-        </span>
-        <h1 class="hero-title reveal" style="--d:.08s">Transformamos <span class="ht-em">organizaciones</span> con tecnología.</h1>
-        <p class="hero-sub reveal" style="--d:.16s">
-          Firma de consultoría tecnológica de alto impacto. Diseñamos plataformas
-          digitales, arquitecturas de datos y sistemas que generan resultados
-          medibles desde el primer día.
-        </p>
-        <div class="hero-actions reveal" style="--d:.24s">
-          <a href="#contacto" class="btn-primary ripple">Iniciar proyecto</a>
-          <a href="#servicios" class="btn-ghost">Ver capacidades →</a>
-        </div>
-        <div class="hero-trust reveal" style="--d:.32s">
-          <div class="ht-stars">★★★★★</div>
-          <p><strong><span class="count" data-target="47">0</span>+ proyectos</strong> entregados con <strong>98%</strong> de satisfacción</p>
-        </div>
+    <div class="hero-content">
+      <p class="hero-kicker reveal" style="--d:.02s"><span class="hk-line"></span>Firma de ingeniería de software &amp; datos</p>
+      <h1 class="hero-h1">
+        <span class="hh-l reveal" style="--d:.08s">Transformamos organizaciones</span>
+        <span class="hh-l reveal" style="--d:.16s">con <span class="grad">tecnología</span>.</span>
+      </h1>
+      <p class="hero-lead reveal" style="--d:.26s">
+        Diseñamos plataformas digitales, arquitecturas de datos y sistemas
+        estratégicos que generan resultados medibles desde el primer día.
+      </p>
+      <div class="hero-cta reveal" style="--d:.34s">
+        <a href="#contacto" class="btn-primary ripple">Iniciar proyecto</a>
+        <a href="#servicios" class="btn-line">Ver capacidades →</a>
       </div>
-
-      <!-- ── Columna visual: panel de datos ── -->
-      <div class="hero-visual reveal" style="--d:.2s">
-        <div class="dash" id="heroDash">
-
-          <div class="dash-head">
-            <div class="dash-title">
-              <span class="dash-dotset"><i></i><i></i><i></i></span>
-              Panel de operación
-            </div>
-            <span class="dash-live"><span class="dl-dot"></span>En vivo</span>
-          </div>
-
-          <div class="dash-kpis">
-            <div class="kpi">
-              <span class="kpi-lbl">Ingresos</span>
-              <span class="kpi-val">S/ 1.24M</span>
-              <span class="kpi-delta up">▲ 24.5%</span>
-            </div>
-            <div class="kpi">
-              <span class="kpi-lbl">Eficiencia</span>
-              <span class="kpi-val">98.2%</span>
-              <span class="kpi-delta up">▲ 6.1%</span>
-            </div>
-            <div class="kpi">
-              <span class="kpi-lbl">Procesos</span>
-              <span class="kpi-val">312</span>
-              <span class="kpi-delta up">▲ 18</span>
-            </div>
-          </div>
-
-          <div class="dash-chart">
-            <div class="dc-head">
-              <span class="dc-title">Rendimiento trimestral</span>
-              <span class="dc-tag">+32% YoY</span>
-            </div>
-            <svg class="dc-svg" viewBox="0 0 340 130" preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="dcFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#6366f1" stop-opacity=".28"/>
-                  <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <line x1="0" y1="32"  x2="340" y2="32"  class="dc-grid"/>
-              <line x1="0" y1="64"  x2="340" y2="64"  class="dc-grid"/>
-              <line x1="0" y1="96"  x2="340" y2="96"  class="dc-grid"/>
-              <path class="dc-area" d="M0,104 C46,96 70,74 112,80 C150,86 168,48 210,44 C252,40 286,20 340,14 L340,130 L0,130 Z" fill="url(#dcFill)"/>
-              <path class="dc-line" d="M0,104 C46,96 70,74 112,80 C150,86 168,48 210,44 C252,40 286,20 340,14"/>
-              <circle class="dc-dot" cx="340" cy="14" r="4"/>
-            </svg>
-            <div class="dash-bars">
-              <span style="--h:42%"></span>
-              <span style="--h:58%"></span>
-              <span style="--h:49%"></span>
-              <span style="--h:71%"></span>
-              <span style="--h:63%"></span>
-              <span style="--h:88%"></span>
-              <span style="--h:79%"></span>
-              <span style="--h:96%"></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tarjetas flotantes -->
-        <div class="float-card fc-1">
-          <div class="fc-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 18l5-6 4 4 7-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <strong>+24.5%</strong>
-            <span>este trimestre</span>
-          </div>
-        </div>
-        <div class="float-card fc-2">
-          <div class="fc-ring" style="--p:99"><i></i></div>
-          <div><strong>99.9%</strong><span>SLA disponibilidad</span></div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Franja de métricas -->
-    <div class="hero-metrics-strip reveal" style="--d:.4s">
-      <div class="hms-item">
-        <span class="hms-num"><span class="count" data-target="47">0</span>+</span>
-        <span class="hms-lbl">Proyectos entregados</span>
-      </div>
-      <div class="hms-div"></div>
-      <div class="hms-item">
-        <span class="hms-num"><span class="count" data-target="34">0</span>+</span>
-        <span class="hms-lbl">Clientes activos</span>
-      </div>
-      <div class="hms-div"></div>
-      <div class="hms-item">
-        <span class="hms-num">48h</span>
-        <span class="hms-lbl">Arranque garantizado</span>
-      </div>
-      <div class="hms-div"></div>
-      <div class="hms-item">
-        <span class="hms-num">98%</span>
-        <span class="hms-lbl">Satisfacción cliente</span>
-      </div>
-      <div class="hms-div"></div>
-      <div class="hms-item">
-        <span class="hms-num">🇵🇪 🇨🇱</span>
-        <span class="hms-lbl">Perú · Chile</span>
+      <div class="hero-stats reveal" style="--d:.44s">
+        <div class="hstat"><b><span class="count" data-target="47">0</span>+</b><span>Proyectos entregados</span></div>
+        <div class="hstat"><b><span class="count" data-target="34">0</span>+</b><span>Clientes activos</span></div>
+        <div class="hstat"><b>98%</b><span>Satisfacción</span></div>
+        <div class="hstat"><b>48h</b><span>Arranque</span></div>
       </div>
     </div>
   </div>
+  <div class="hero-fade" aria-hidden="true"></div>
 </section>
 
 
@@ -761,6 +655,6 @@
   <span class="wa-tooltip">Escríbenos por WhatsApp</span>
 </a>
 
-<script src="main.js?v=10"></script>
+<script src="main.js?v=11"></script>
 </body>
 </html>
